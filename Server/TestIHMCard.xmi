@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+  <uml:Model name="TestIhm" xmi:id="_4w4KoKenEe-4uraXnwnHIA">
+    <packagedElement name="Utilisateur" xmi:id="_4w4KoaenEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KoqenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="nom" type="_4w4K0qenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4Ko6enEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="Administrateur" xmi:id="_4w4KpKenEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <generalization general="_4w4KoaenEe-4uraXnwnHIA" xmi:id="_4w4KpaenEe-4uraXnwnHIA" xmi:type="uml:Generalization"/>
+      <ownedAttribute name="niveau" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KpqenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_4w4Kz6enEe-4uraXnwnHIA" name="" type="_4w4KtqenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4Kp6enEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue xmi:id="_4w4KqKenEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="*" xmi:id="_4w4KqaenEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedOperation name="creer" visibility="public" xmi:id="_4w4KqqenEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_4w4K06enEe-4uraXnwnHIA" xmi:id="_4w4Kq6enEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="Client" xmi:id="_4w4KrKenEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <generalization general="_4w4KoaenEe-4uraXnwnHIA" xmi:id="_4w4KraenEe-4uraXnwnHIA" xmi:type="uml:Generalization"/>
+      <ownedAttribute name="epargne" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KrqenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_4w4KzaenEe-4uraXnwnHIA" name="" type="_4w4KwqenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4Kr6enEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue value="1" xmi:id="_4w4KsKenEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="1" xmi:id="_4w4KsaenEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedOperation name="Epargner" visibility="public" xmi:id="_4w4KsqenEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_4w4K06enEe-4uraXnwnHIA" xmi:id="_4w4Ks6enEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+      <ownedOperation name="vendre" visibility="public" xmi:id="_4w4KtKenEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_4w4K06enEe-4uraXnwnHIA" xmi:id="_4w4KtaenEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="produit" xmi:id="_4w4KtqenEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4Kt6enEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="nom" type="_4w4K0qenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KuKenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="date" type="_4w4K0qenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KuaenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_4w4KzqenEe-4uraXnwnHIA" name="" type="_4w4KwqenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KuqenEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue xmi:id="_4w4Ku6enEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="*" xmi:id="_4w4KvKenEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedAttribute association="_4w4Kz6enEe-4uraXnwnHIA" name="" type="_4w4KpKenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KvaenEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue value="1" xmi:id="_4w4KvqenEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="1" xmi:id="_4w4Kv6enEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedOperation name="delete" visibility="public" xmi:id="_4w4KwKenEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_4w4K06enEe-4uraXnwnHIA" xmi:id="_4w4KwaenEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="Panier" xmi:id="_4w4KwqenEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4Kw6enEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="date" type="_4w4K0aenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KxKenEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_4w4KzaenEe-4uraXnwnHIA" name="" type="_4w4KrKenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KxaenEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue value="1" xmi:id="_4w4KxqenEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="1" xmi:id="_4w4Kx6enEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedAttribute association="_4w4KzqenEe-4uraXnwnHIA" name="" type="_4w4KtqenEe-4uraXnwnHIA" visibility="private" xmi:id="_4w4KyKenEe-4uraXnwnHIA" xmi:type="uml:Property">
+        <lowerValue value="1" xmi:id="_4w4KyaenEe-4uraXnwnHIA" xmi:type="uml:LiteralInteger"/>
+        <upperValue value="*" xmi:id="_4w4KyqenEe-4uraXnwnHIA" xmi:type="uml:LiteralUnlimitedNatural"/>
+      </ownedAttribute>
+      <ownedOperation name="nombreProduit" visibility="public" xmi:id="_4w4Ky6enEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_4w4K06enEe-4uraXnwnHIA" xmi:id="_4w4KzKenEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement memberEnd="_4w4Kr6enEe-4uraXnwnHIA _4w4KxaenEe-4uraXnwnHIA" name="etre_possede" xmi:id="_4w4KzaenEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_4w4KyKenEe-4uraXnwnHIA _4w4KuqenEe-4uraXnwnHIA" name="etre dans" xmi:id="_4w4KzqenEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_4w4KvaenEe-4uraXnwnHIA _4w4Kp6enEe-4uraXnwnHIA" name="creer" xmi:id="_4w4Kz6enEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement name="PrimitiveTypes" xmi:id="_4w4K0KenEe-4uraXnwnHIA" xmi:type="uml:Package">
+      <packagedElement name="int" xmi:id="_4w4K0aenEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="char" xmi:id="_4w4K0qenEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="void" xmi:id="_4w4K06enEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>

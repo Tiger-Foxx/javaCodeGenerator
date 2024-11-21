@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+  <uml:Model name="no_title" xmi:id="_LAVPkKemEe-4uraXnwnHIA">
+    <packagedElement name="Utilisateur" xmi:id="_LAVPkaemEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPkqemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="nom" type="_LAVPtqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPk6emEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+    </packagedElement>
+    <packagedElement name="Administrateur" xmi:id="_LAVPlKemEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <generalization general="_LAVPkaemEe-4uraXnwnHIA" xmi:id="_LAVPlaemEe-4uraXnwnHIA" xmi:type="uml:Generalization"/>
+      <ownedAttribute name="niveau" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPlqemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPs6emEe-4uraXnwnHIA" name="" type="_LAVPoqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPl6emEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedOperation name="creer" visibility="public" xmi:id="_LAVPmKemEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_LAVPt6emEe-4uraXnwnHIA" xmi:id="_LAVPmaemEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="Client" xmi:id="_LAVPmqemEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <generalization general="_LAVPkaemEe-4uraXnwnHIA" xmi:id="_LAVPm6emEe-4uraXnwnHIA" xmi:type="uml:Generalization"/>
+      <ownedAttribute name="epargne" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPnKemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPsaemEe-4uraXnwnHIA" name="" type="_LAVPqqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPnaemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedOperation name="Epargner" visibility="public" xmi:id="_LAVPnqemEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_LAVPt6emEe-4uraXnwnHIA" xmi:id="_LAVPn6emEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+      <ownedOperation name="vendre" visibility="public" xmi:id="_LAVPoKemEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_LAVPt6emEe-4uraXnwnHIA" xmi:id="_LAVPoaemEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="produit" xmi:id="_LAVPoqemEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPo6emEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="nom" type="_LAVPtqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPpKemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="date" type="_LAVPtqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPpaemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPsqemEe-4uraXnwnHIA" name="" type="_LAVPqqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPpqemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPs6emEe-4uraXnwnHIA" name="" type="_LAVPlKemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPp6emEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedOperation name="delete" visibility="public" xmi:id="_LAVPqKemEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_LAVPt6emEe-4uraXnwnHIA" xmi:id="_LAVPqaemEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement name="Panier" xmi:id="_LAVPqqemEe-4uraXnwnHIA" xmi:type="uml:Class">
+      <ownedAttribute name="id" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPq6emEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute name="date" type="_LAVPtaemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPrKemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPsaemEe-4uraXnwnHIA" name="" type="_LAVPmqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPraemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedAttribute association="_LAVPsqemEe-4uraXnwnHIA" name="" type="_LAVPoqemEe-4uraXnwnHIA" visibility="private" xmi:id="_LAVPrqemEe-4uraXnwnHIA" xmi:type="uml:Property"/>
+      <ownedOperation name="nombreProduit" visibility="public" xmi:id="_LAVPr6emEe-4uraXnwnHIA" xmi:type="uml:Operation">
+        <ownedParameter direction="return" type="_LAVPt6emEe-4uraXnwnHIA" xmi:id="_LAVPsKemEe-4uraXnwnHIA" xmi:type="uml:Parameter"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement memberEnd="_LAVPnaemEe-4uraXnwnHIA _LAVPraemEe-4uraXnwnHIA" name="etre_possede" xmi:id="_LAVPsaemEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_LAVPrqemEe-4uraXnwnHIA _LAVPpqemEe-4uraXnwnHIA" name="etre dans" xmi:id="_LAVPsqemEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement memberEnd="_LAVPp6emEe-4uraXnwnHIA _LAVPl6emEe-4uraXnwnHIA" name="creer" xmi:id="_LAVPs6emEe-4uraXnwnHIA" xmi:type="uml:Association"/>
+    <packagedElement name="PrimitiveTypes" xmi:id="_LAVPtKemEe-4uraXnwnHIA" xmi:type="uml:Package">
+      <packagedElement name="int" xmi:id="_LAVPtaemEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="char" xmi:id="_LAVPtqemEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+      <packagedElement name="void" xmi:id="_LAVPt6emEe-4uraXnwnHIA" xmi:type="uml:PrimitiveType"/>
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>
