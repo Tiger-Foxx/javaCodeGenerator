@@ -11,6 +11,7 @@ function App() {
     const handleFileUpload = async (file) => {
         setIsLoading(true);
         try {
+            setIsSuccess(true)
             const formData = new FormData();
             formData.append("xmiFile", file);
 
@@ -22,13 +23,18 @@ function App() {
             if (response.ok) {
                 const blob = await response.blob();
                 const fileURL = URL.createObjectURL(blob);
+                
 
-                setZipFile(fileURL);
+                setZipFile(fileURL); 
+                setIsSuccess(true);
+                setIsLoading(false);
                 setTimeout(() => {
-                    setIsSuccess(true);
+                    setIsSuccess(true); 
                 }, 2000);
+
             } else {
                 alert("Une erreur est survenue lors de la conversion !");
+                setIsLoading(false);
             }
         } catch (error) {
             console.error("Erreur :", error);
@@ -42,8 +48,8 @@ function App() {
     return (
         <div className="app">
             <header className="app-header">
-                <h1>Convertisseur XMI vers Java</h1>
-                <p>Convertissez vos fichiers XMI en code Java avec facilité.</p>
+                <h1>Convertisseur Diagramme vers Java</h1>
+                <p>Convertissez vos Diagrammes XMI en code Java avec facilité.</p>
             </header>
             <main>
                 {isLoading ? (
@@ -66,17 +72,20 @@ function App() {
                             Télécharger le dossier ZIP
                         </button>
                         <button
+                            style={{marginLeft:10}}
                             className="upload-another-button"
                             onClick={() => {
                                 setZipFile(null);
                                 setIsSuccess(false);
                             }}
+
                         >
                             Convertir un autre fichier
                         </button>
                     </div>
                 ) : (
-                    <FileUpload onFileUpload={handleFileUpload} />
+                   <FileUpload onFileUpload={handleFileUpload} />
+                    
                 )}
             </main>
         </div>
