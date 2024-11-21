@@ -11,11 +11,9 @@ function App() {
     const handleFileUpload = async (file) => {
         setIsLoading(true);
         try {
-            // Préparer les données à envoyer
             const formData = new FormData();
             formData.append("xmiFile", file);
 
-            // Appeler l'API backend
             const response = await fetch("http://localhost:3000/convert", {
                 method: "POST",
                 body: formData,
@@ -25,9 +23,9 @@ function App() {
                 const blob = await response.blob();
                 const fileURL = URL.createObjectURL(blob);
 
-                setZipFile(fileURL); // Définir l'URL du fichier ZIP
+                setZipFile(fileURL);
                 setTimeout(() => {
-                    setIsSuccess(true); // Afficher la page de succès après un délai
+                    setIsSuccess(true);
                 }, 2000);
             } else {
                 alert("Une erreur est survenue lors de la conversion !");
@@ -36,7 +34,7 @@ function App() {
             console.error("Erreur :", error);
         } finally {
             setTimeout(() => {
-                setIsLoading(false); // Arrêter l'animation de chargement
+                setIsLoading(false);
             }, 2000);
         }
     };
@@ -57,7 +55,6 @@ function App() {
                         <button
                             className="download-button"
                             onClick={() => {
-                                // Télécharger le fichier uniquement au clic
                                 const link = document.createElement("a");
                                 link.href = zipFile;
                                 link.download = "GeneratedCode.zip";

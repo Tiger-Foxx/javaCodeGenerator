@@ -7,13 +7,10 @@ const GENERATED_DIR = "GeneratedCode";
 
 async function main(xmiFilePath) {
   try {
-    // Lire et analyser le fichier XMI
     const xmiData = await parseXMI(xmiFilePath);
 
-    // Créer le répertoire pour les fichiers générés
     await fs.ensureDir(GENERATED_DIR);
 
-    // Générer les fichiers Java
     await generateJavaClasses(xmiData, GENERATED_DIR);
 
     console.log("Toutes les classes ont été générées avec succès !");

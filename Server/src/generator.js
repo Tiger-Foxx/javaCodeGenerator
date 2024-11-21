@@ -8,7 +8,6 @@ const fs = require("fs-extra");
  */
 async function generateJavaClasses({ classes }, outputDir) {
   try {
-    // Assurez-vous que le répertoire existe
     await fs.ensureDir(outputDir);
 
     for (const cls of classes) {
@@ -20,7 +19,7 @@ async function generateJavaClasses({ classes }, outputDir) {
     return true;
   } catch (error) {
     console.error("Erreur lors de la génération des classes :", error);
-    throw error; // Relancer l'erreur pour qu'elle soit capturée ailleurs
+    throw error;
   }
 }
 
@@ -36,7 +35,6 @@ function generateJavaCode({ name, attributes, methods, parentClass, relations })
     (attr) => `    private ${attr.type} ${attr.name};`
   );
 
-  // Générer les relations d'association
   const relationLines = (relations || []).map(({ target, multiplicity }) => {
     if (multiplicity === "1-to-1") {
       return `    private ${target} ${target.toLowerCase()};`;
@@ -53,7 +51,6 @@ function generateJavaCode({ name, attributes, methods, parentClass, relations })
     generateSetter(attr),
   ]);
 
-  // Gestion des méthodes (avec surcharge si nécessaire)
   const methodLines = methods.flatMap((method) =>
     generateOverloadedMethods(method)
   );

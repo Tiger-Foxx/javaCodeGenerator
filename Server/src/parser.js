@@ -10,18 +10,14 @@ async function parseXMI(filePath) {
   const model = xmiData["xmi:XMI"]["uml:Model"][0];
   const elements = model.packagedElement;
 
-  // Mapper les IDs vers les noms
   const idToName = buildIdToNameMap(elements);
 
-  // Identifier les types primitifs
   const primitiveTypes = buildPrimitiveTypeMap(elements);
 
-  // Construire la liste des classes
   const classes = elements
     .filter((el) => el.$["xmi:type"] === "uml:Class")
     .map((el) => buildClassData(el, idToName, primitiveTypes));
 
-  // Extraire et intégrer les associations
   const associations = extractAssociations(elements, idToName);
   const classMap = Object.fromEntries(classes.map((cls) => [cls.name, cls]));
   integrateAssociations(associations, classMap);
@@ -30,7 +26,6 @@ async function parseXMI(filePath) {
 }
 
 
-// Construire le mappage ID -> Nom
 function buildIdToNameMap(elements) {
   const map = {};
   elements.forEach((el) => {
@@ -44,7 +39,6 @@ function buildIdToNameMap(elements) {
   return map;
 }
 
-// Construire le mappage des types primitifs (xmi:id -> type Java)
 function buildPrimitiveTypeMap(elements) {
   const map = {};
   elements
@@ -55,7 +49,6 @@ function buildPrimitiveTypeMap(elements) {
   return map;
 }
 
-// Construire les données pour une classe
 function buildClassData(classElement, idToName, primitiveTypes) {
   const name = classElement.$.name;
   const attributes = (classElement.ownedAttribute || []).map((attr) => ({
@@ -77,11 +70,10 @@ function buildClassData(classElement, idToName, primitiveTypes) {
   const parentId = classElement.generalization?.[0]?.$.general || null;
   const parentClass = parentId ? idToName[parentId] : null;
 
-  return { name, attributes, methods, parentClass, relations: [] }; // Ajout de relations vide par défaut
+  return { name, attributes, methods, parentClass, relations: [] };
 }
 
 
-// Résoudre un type (classe ou primitif)
 function resolveType(typeId, idToName, primitiveTypes) {
   if (!typeId) return "Object";
   return primitiveTypes[typeId] || idToName[typeId] || "Object";
